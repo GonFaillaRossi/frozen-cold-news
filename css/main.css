@@ -1,0 +1,378 @@
+@font-face {
+    font-family: IceCold;
+    src: local(IceCold),
+    url("C:/Users/WildFlare/Desktop/practica html/cold news/resources/IceCold.ttf")
+    format('ttf');
+}
+
+* {
+    color: white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*font-family: Cambria, Cochin, Georgia, serif;*/
+}
+
+
+
+body {
+    color: white;
+   /* background: rgb(10, 85, 114);*/
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+
+ul {
+    list-style: none;
+}
+
+/* MAIN SECTION */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* MENU NAVIGATION */
+.nav-main {
+    font-size: 17px;
+    color: white;
+    height: 80px;
+    padding: 20px 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.nav-menu {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-brand {
+    width: 80px;
+}
+
+/*MENU LEFT SECTION*/
+
+.nav-main ul {
+    display:flex;
+}
+
+.nav-main ul li {
+    padding: 10px;
+    font-family: IceCold !important;
+}
+
+.nav-main ul li a {
+    padding: 0px;
+    text-decoration: none;
+    text-shadow:  2px 2px 5px blue;
+    transition: 500ms;
+}
+
+.nav-main ul li a:hover {
+    text-shadow:  2px 2px 5px #2F80ED, 8px 8px 10px #56CCF2;
+    transition: 500ms;
+}
+
+.nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.nav-menu-right {
+    font-size: 20px;
+}
+
+/* Responsive Button - Nav Menu*/
+
+.menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1.5rem;
+    display: none;
+}
+
+/* SHOWCASE */
+hr {
+    margin: 10px 0;
+}
+
+.showcase {
+    background: url('C:/Users/WildFlare/Desktop/practica html/cold news/img/arandelle-magic-world.jpg') no-repeat center center/cover;
+    height: 450px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    /*background: #262626;*/
+    background: linear-gradient(90deg, #00d4ff 5%, #020024 20%, #090979 50%, #00d4ff 100%);
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5%;
+    transition: 500ms;
+    color: #ccc;
+}
+
+.btn:hover {
+    opacity: .4;
+    transition: 800ms;
+    box-shadow: 2px 2px 15px 5px white, 2px 2px 15px 5px white;
+}
+
+.showcase h2, .showcase p {
+    margin: 10px 0;
+    max-width: 60%;
+    text-shadow: 3px 3px 5px black;
+}
+
+/* NEWS CARDS */
+
+.news-cards {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 10px 0;
+}
+
+.news-cards img{
+    width: 100%;
+    height: 150px;
+    border-radius: 10%; 
+    border: 3px solid #484ada;
+    box-shadow:3px 3px 5px #56CCF2;
+}
+
+.news-cards h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    text-shadow: 3px 3px 5px black;
+}
+
+.banner-cards-one{
+    background: url("C:/Users/WildFlare/Desktop/practica html/cold news/img/frozen-2-portada.jpg") no-repeat center center/cover;
+    height: 400px;
+    width: 100%;
+    transition: 800ms;
+    margin: 50px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.banner-cards-one:hover {
+    box-shadow: 2px 2px 15px 5px white, 2px 2px 15px 5px white;
+    transition: 500ms;
+}
+
+
+.banner-cards-one .content {
+    padding: 90px 0 0 30px;
+    width: 40%;
+}
+
+.banner-cards-one .content h3, .banner-cards-one .content p {
+    color: white;    
+    font-weight: bold;
+    margin: 20px 0;
+    text-shadow: 3px 3px 5px black;
+    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+}
+
+/* SECOND BANNER */
+
+.banner-cards-two {
+    margin: 50px 0;
+    width: 100%;
+    height: 400px;
+    background: url("C:/Users/WildFlare/Desktop/practica html/cold news/img/christophe-bosque-frozen-magic-world.jpg") no-repeat center center/cover;
+}
+
+.banner-cards-two .content {
+    padding: 100px 0 0 30px;
+    width: 50%;
+}
+
+.banner-cards-two .content h3, .banner-cards-two .content p {
+    font-weight: bold;
+    margin: 20px 0;
+    text-shadow: 3px 3px 5px black;
+}
+
+/* SOCIAL LINKS */
+
+.social {
+    margin: 50px;
+}
+
+.social p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    margin: 0 30px;
+    text-shadow: 2px 2px 2px gray;
+    transition: 1000ms;
+}
+
+.links a:hover {
+    text-shadow: 2px 2px 2px gray;
+    text-shadow: 5px 5px 10px #484ada;
+    transition: 1000ms;
+}
+
+.links i {
+    font-size: 3rem;
+}
+
+/* FOOTER LINKS*/
+
+.footer-links {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-container ul {
+    margin: 0 auto;
+}
+
+.footer-container ul li {
+    line-height: 2.7;
+    
+}
+
+.footer-container ul li a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer {
+    text-align: center;    
+    background: #2f3640;
+    font-size: 12px;
+    padding: 20px 0;
+    padding-bottom: 20px;
+}
+
+.footer h3 {
+    color: #6b6b6b;
+}
+
+/* RESPONSIVE ELEMENTS */
+
+@media (max-width: 700px) {
+    .nav-main ul.nav-menu {
+        display: block;
+        background: #2f3640;
+        top: 0;
+        left: 0;
+        position: absolute;
+        padding: 30px;
+        height: 100%;   
+        opacity: 0.9;
+        transform: translateX(-400px);   
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .nav-main ul.nav-menu.show {
+        transform: translateX(-20px);
+    }
+
+    .nav-main ul.nav-menu li {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .nav-main ul.nav-menu-right {
+        margin-right: 30px;
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 30px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .news-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner-cards-one .content, .banner-cards-two .content {
+        width: 80%;
+    }
+
+    .footer-links .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width:500px) {
+    .news-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .news-cards img {
+        height: 250px;
+    }
+
+    .banners-cards-one .content, .banner-cards-two .content {
+        width: 100%;
+        padding: 60px 20px;
+    }
+
+    .showcase{
+        padding: 60px 30px;
+    }
+
+    .showcase p {
+        font-size: 13px;
+    }
+
+    .showcase h2 {
+        font-size: 16px;
+    }
+
+    .footer-links .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
