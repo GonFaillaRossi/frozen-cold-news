@@ -1,7 +1,7 @@
 @font-face {
     font-family: IceCold;
     src: local(IceCold),
-    url("C:/Users/WildFlare/Desktop/practica html/cold news/resources/IceCold.ttf")
+    url("resources/IceCold.ttf")
     format('ttf');
 }
 
@@ -204,7 +204,7 @@ hr {
     margin: 50px 0;
     width: 100%;
     height: 400px;
-    background: url("C:/Users/WildFlare/Desktop/practica html/cold news/img/christophe-bosque-frozen-magic-world.jpg") no-repeat center center/cover;
+    background: url("img/christophe-bosque-frozen-magic-world.jpg") no-repeat center center/cover;
 } /*C:/Users/WildFlare/Desktop/practica html/cold news/*/
 
 .banner-cards-two .content {
