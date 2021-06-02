@@ -1,28 +1,17 @@
-@font-face {
-    font-family: IceCold;
-    src: local(IceCold),
-    url("resources/IceCold.ttf")
-    format('ttf');
-}
-
 * {
-    color: white;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /*font-family: Cambria, Cochin, Georgia, serif;*/
+    font-family: 'Cambria', 'Cochin', Georgia, serif;
 }
 
 
-
 body {
-    color: white;
-   /* background: rgb(10, 85, 114);*/
-    background: #56CCF2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #616161;
+    /*color: #2F80ED;*/
+    background: white;
     font-size: 16px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Geneva', Verdana, sans-serif;
  }
 
 ul {
@@ -31,62 +20,85 @@ ul {
 
 /* MAIN SECTION */
 .container {
-    width: 90%;
+    width: 100%;
     margin: auto;
+}
+
+.overlay-menu {
+    width: 100%;
+    height: 150px;
+    z-index: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;    
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.4;
+
 }
 
 /* MENU NAVIGATION */
 .nav-main {
-    font-size: 17px;
+    z-index: 2;
+    margin: 0 0 auto auto;
+    font-size: 14px;
     color: white;
     height: 80px;
     padding: 20px 0;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 25px;
 }
 
 .nav-menu {
-    text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .nav-brand {
-    width: 80px;
+    width: 150px;
+    position: absolute;
+    left: 3%;
 }
 
 /*MENU LEFT SECTION*/
 
 .nav-main ul {
-    display:flex;
+    display: flex;
 }
 
 .nav-main ul li {
-    padding: 10px;
-    font-family: IceCold !important;
+    padding: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
 }
 
 .nav-main ul li a {
+    color: #F2F2F2;
+    font-size: 14px;
+    font-weight: 50;
+    line-height: 19px;
     padding: 0px;
     text-decoration: none;
-    text-shadow:  2px 2px 5px blue;
+    text-shadow:  1px 1px 3px black;
     transition: 500ms;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    
+
 }
 
 .nav-main ul li a:hover {
-    text-shadow:  2px 2px 5px #2F80ED, 8px 8px 10px #56CCF2;
+    text-shadow:  3px 3px 5px gray;
     transition: 500ms;
 }
 
 .nav-main ul.nav-menu {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 .nav-menu-right {
     font-size: 20px;
+    color: white;
 }
 
 /* Responsive Button - Nav Menu*/
@@ -102,15 +114,11 @@ ul {
 }
 
 /* SHOWCASE */
-hr {
-    margin: 10px 0;
-}
-
 .showcase {
     background: url('../img/arandelle-magic-world.jpg') no-repeat center center/cover;
     height: 450px;
     width: 100%;
-    padding: 20px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,55 +127,91 @@ hr {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.btn {
-    cursor: pointer;
-    display: inline-block;
-    /*background: #262626;*/
-    background: linear-gradient(90deg, #00d4ff 5%, #020024 20%, #090979 50%, #00d4ff 100%);
-    padding: 10px 20px;
-    text-decoration: none;
-    border: 1px solid #ccc;
-    margin: 10px 0;
-    font-weight: bold;
-    font-size: 12px;
-    border-radius: 5%;
-    transition: 500ms;
-    color: #ccc;
+.showcase h2, .showcase p {
+    position: absolute;
+    color:white;
+    margin: 10px 0;    
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    text-align:center;
 }
 
-.btn:hover {
-    opacity: .4;
+.showcase h2 {
+    top: 150px;
+    max-width: 80%;
+    font-size: 47px;
+    font-family: cursive;
+    font-weight: 50;
+}
+
+.showcase p {
+    top: 200px;
+    max-width: 60%;
+}
+
+.go-there-btn {
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    top: 300px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+
+    background: linear-gradient(90deg, #01EEFF 0%, #018DF3 100%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.go-there-btn-caption {
+    margin: auto auto;
+    font-family: Open Sans !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px; 
+    text-align: center;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+.go-there-btn:hover {
+    opacity: .8;
     transition: 800ms;
     box-shadow: 2px 2px 15px 5px white, 2px 2px 15px 5px white;
-}
-
-.showcase h2, .showcase p {
-    margin: 10px 0;
-    max-width: 60%;
-    text-shadow: 3px 3px 5px black;
 }
 
 /* NEWS CARDS */
 
 .news-cards {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
-    margin: 10px 0;
+    width: 90%;
+    margin: 80px auto;
+    
 }
 
-.news-cards img{
-    width: 100%;
-    height: 150px;
-    border-radius: 10%; 
-    border: 3px solid #484ada;
-    box-shadow:3px 3px 5px #56CCF2;
+.news-cards img {
+    width: inherit;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5%; 
+   /*border: 1px solid #484ada;
+    box-shadow:1px 1px 3px #56CCF2;*/
 }
 
 .news-cards h3 {
     font-size: 20px;
     margin: 10px 0;
-    text-shadow: 3px 3px 5px black;
+   /* text-shadow: 3px 3px 5px black;*/
 }
 
 .banner-cards-one{
@@ -198,6 +242,31 @@ hr {
     /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    /*background: #262626;*/
+    background: #2F80ED;
+   /*background: linear-gradient(90deg, #00d4ff 5%, #020024 20%, #090979 50%, #00d4ff 100%);*/
+    
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5%;
+    transition: 500ms;
+    color: whitesmoke;
+    z-index: 2;
+}
+
+.btn:hover {
+    opacity: .4;
+    transition: 800ms;
+    box-shadow: 2px 2px 15px 5px white, 2px 2px 15px 5px white;
+}
+
 /* SECOND BANNER */
 
 .banner-cards-two {
@@ -213,15 +282,53 @@ hr {
 }
 
 .banner-cards-two .content h3, .banner-cards-two .content p {
+    color: white;
     font-weight: bold;
     margin: 20px 0;
-    text-shadow: 3px 3px 5px black;
+    /*text-shadow: 3px 3px 5px black;*/
 }
 
+.call-action-btn {
+    
+    width: 150px;
+    height: 60px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(90deg, #01EEFF 0%, #018DF3 100%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
+.call-action-caption {
+    margin: auto auto;
+    font-family: Open Sans !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px; 
+    text-align: center;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+.call-action-btn:hover {
+    opacity: .8;
+    transition: 800ms;
+    box-shadow: 2px 2px 15px 5px white, 2px 2px 15px 5px white;
+}
 /* SOCIAL LINKS */
 
 .social {
-    margin: 50px;
+    margin: 120px;
 }
 
 .social p {
@@ -237,6 +344,7 @@ hr {
 }
 
 .links a {
+    color: #018DF3;
     margin: 0 30px;
     text-shadow: 2px 2px 2px gray;
     transition: 1000ms;
@@ -244,8 +352,8 @@ hr {
 
 .links a:hover {
     text-shadow: 2px 2px 2px gray;
-    text-shadow: 5px 5px 10px #484ada;
-    transition: 1000ms;
+    text-shadow: 5px 5px 10px #ccc;
+    transition: 800ms;
 }
 
 .links i {
@@ -259,6 +367,10 @@ hr {
     color: #616161;
     font-size: 12px;
     padding: 35px 0;
+}
+
+.footer-links a {
+    color: #ccc;
 }
 
 .footer-container {
@@ -295,6 +407,106 @@ hr {
     color: #6b6b6b;
 }
 
+
+
+/*########################################################################################
+##########################################################################################
+##########################################################################################
+############################## RESPONSIVE IMAGES - V2 Adaptation  ########################
+##########################################################################################
+##########################################################################################
+########################################################################################*/
+
+.diapositiva1 {
+    background-image: url('../img/elsa-y-anna-1.jpg');
+    width: 100% !important;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 5%;
+    
+}
+
+.diapositiva2 {
+    background-image: url("../img/olaf-magic-world.jpg");
+    width: 100% !important;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 5%;
+}
+
+.diapositiva3 {
+    background-image: url("../img/prince-hans-magic-world.jpg");
+    width: 100% !important;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 5%;
+}
+
+.diapositiva4 {
+    background-image: url("../img/frozen-sben-magic-world.jpg");
+    width: 100% !important;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 5%;
+}
+
+
+.diapositiva5 {
+    background-image: url("../img/christoph-y-sben.jpg");
+    width: 100% !important;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 5%;
+}
+
+.diapositiva6 {
+    background-image: url("../img/copo-de-nieve-cake.jpg");
+    width: 100% !important;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 5%;
+}
+.diapositiva7 {
+    background-image: url("../img/familia-completa-niñas.jpg");
+    width: 100% !important;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 5%;
+}
+.diapositiva8 {
+    background-image: url("../img/frozen-vs-spiderman.jpg");
+    width: 100% !important;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 5%;
+}
+
+
+/*########################################################################################
+##########################################################################################
+##########################################################################################
+#####################################  End Code ##########################################
+##########################################################################################
+##########################################################################################
+########################################################################################*/
+
+
 /* RESPONSIVE ELEMENTS */
 
 @media (max-width: 700px) {
@@ -328,8 +540,20 @@ hr {
         right: 30px;
     }
 
+
+
+    .nav-menu-right {
+        top:30px;
+    }
+
     .menu-btn {
         display: block;
+        position:absolute;
+        top: 32px;
+    }
+
+    .showcase h2 {
+        font-size: 30px;
     }
 
     .news-cards {
@@ -360,7 +584,7 @@ hr {
         padding: 60px 20px;
     }
 
-    .showcase{
+    .showcase {
         padding: 60px 30px;
     }
 
@@ -368,11 +592,22 @@ hr {
         font-size: 13px;
     }
 
+
     .showcase h2 {
-        font-size: 16px;
+        font-size: 26px;
     }
 
     .footer-links .footer-container {
         grid-template-columns: 1fr;
+    }
+    
+    .nav-menu-right {
+        top: 30px;
+    }
+
+    .menu-btn {
+        display: block;
+        position: absolute;
+        top: 32px;
     }
 }
